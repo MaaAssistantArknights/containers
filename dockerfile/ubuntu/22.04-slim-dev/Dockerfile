@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y curl wget sudo && \
+    apt-get install -y curl wget sudo git && \
     useradd dev \
       --create-home \
       --shell=/bin/bash \
