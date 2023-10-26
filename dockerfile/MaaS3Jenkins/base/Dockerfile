@@ -21,3 +21,5 @@ COPY --from=BUILD /root/MaaRelease/scripts /root/MaaRelease/scripts
 
 # 安装必要的工具
 RUN apk add --no-cache git uuidgen python3
+RUN ls -lh /root/MaaRelease
+RUN ls -lh /root/MaaRelease/scripts
