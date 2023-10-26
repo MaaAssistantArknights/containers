@@ -1,16 +1,12 @@
-FROM ubuntu:22.04
+FROM archlinux:base-20231015.0.185077
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y \
+RUN pacman -Syu --noconfirm && \
+    pacman -S --noconfirm \
     curl \
-    git \
     wget \
-    sudo \
-    build-essential \
-    python3 \
-    python3-pip \
-    vim && \
+    git \
+    sudo && \
+    pacman -Scc --noconfirm && \
     useradd dev \
       --create-home \
       --shell=/bin/bash \
