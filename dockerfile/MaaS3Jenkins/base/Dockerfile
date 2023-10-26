@@ -10,6 +10,7 @@ RUN apt update
 RUN DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical apt install -y -o "Dpkg::Options::=--force-confold" --no-install-recommends curl ca-certificates git
 RUN curl https://dl.min.io/client/mc/release/linux-amd64/mc -o /root/mc && chmod +x /root/mc
 RUN cd /root && git clone --depth 1 https://github.com/MaaAssistantArknights/MaaRelease.git
+RUN cd /root/MaaRelease/scripts && npm run ciInCI
 
 
 FROM node:lts-alpine
