@@ -1,4 +1,4 @@
-FROM ubuntu:jammy as BUILD
+FROM node:lts as BUILD
 
 USER root
 
