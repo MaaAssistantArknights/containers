@@ -19,5 +19,4 @@ COPY --from=BUILD /root/mc /root/mc
 COPY --from=BUILD /root/MaaRelease/scripts /root/MaaRelease/scripts
 
 # 安装必要的工具
-RUN apk --no-cache update
-RUN apk add git uuidgen python3
+RUN apk add --no-cache git uuidgen python3
