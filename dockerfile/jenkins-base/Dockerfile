@@ -2,6 +2,8 @@ FROM node:lts-alpine
 
 USER root
 
+WORKDIR /root
+
 # cache 优化
 COPY mc /root/mc
 
