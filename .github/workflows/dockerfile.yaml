@@ -11,7 +11,7 @@ on:
     branches:
     - main
     paths:
-      - dockerfile/MaaS3Jenkins-base/Dockerfile
+      - dockerfile/jenkins-base/Dockerfile
       - .github/workflows/dockerfile.yaml
 
 env:
