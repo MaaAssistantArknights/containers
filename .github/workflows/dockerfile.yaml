@@ -23,6 +23,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger workflow if no skipped
-        if: contains(github.event.head_commit.message, '[skip ci]')
+      - name: Trigger workflow
         run: gh workflow run docker --repo MaaAssistantArknights/MaaRelease
