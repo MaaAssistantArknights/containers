@@ -1,0 +1,25 @@
+name: docker
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    paths:
+      - dockerfile/MaaS3Jenkins-base/Dockerfile
+      - .github/workflows/dockerfile.yaml
+
+env:
+  GITHUB_TOKEN: ${{ secrets.MISTEOWORKFLOW }}
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: gh workflow run docker --repo MaaAssistantArknights/MaaRelease
